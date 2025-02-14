@@ -1,33 +1,38 @@
 #include <stdio.h>
 
 int main() {
-    char nome[50]
+    char pais[50];
     int populacao;
-    int área;
+    int area;
     float PIB;
-    int pontosturistico;
+    int pontos_turisticos;
+    int opcao;
 
-    printf("Super Trunfo!\n");
-    printf("Cadastro de Cartas.\n");
-    printf("Insira o nome do País:\n");
-    scanf ("%s", &nome);
-    print ("País:%s\n", nome);
-    printf ("População:\n");
-    scanf ("%d", &populacao);
-    
+    do {
+        printf("\nCadastro de Cartas\n");
 
+        printf("País: ");
+        scanf(" %49s", pais);
 
+        printf("População: ");
+        scanf("%d", &populacao);
 
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+        printf("Área: ");
+        scanf("%d", &area);
+        
+        printf("PIB: ");
+        scanf("%f", &PIB);
 
+        printf("Pontos Turísticos: ");
+        scanf("%d", &pontos_turisticos);
+
+        printf("\nPaís: %s\n - População: %d\n - Área: %d\n - PIB: %.2f\n - Pontos Turísticos: %d\n", 
+               pais, populacao, area, PIB, pontos_turisticos);
+        
+        printf("\nDeseja cadastrar outra carta? (1 - Sim, 0 - Não): ");
+        scanf("%d", &opcao);
+    } while (opcao = 1);
+
+    printf("\nEncerrando o programa...\n");
     return 0;
 }
