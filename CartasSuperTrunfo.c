@@ -2,7 +2,7 @@
 
 int main() {
     char pais[50];
-    unsigned long int populacao;  // Alterado para suportar números maiores
+    unsigned long int populacao;
     int area, pontos_turisticos;
     float PIB, densidade, PIBpercapita;
 
@@ -12,8 +12,7 @@ int main() {
     scanf("%s", pais);
 
     printf("População:\n");
-    scanf("%lu", &populacao);  // Usando %lu para unsigned long int
-
+    scanf("%lu", &populacao);
     printf("Área (km²):\n");
     scanf("%d", &area);
     
